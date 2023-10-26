@@ -19,7 +19,7 @@ const corsConfig = cors({
     credentials: true
 });
 
-// app.use(corsConfig);
+app.use(corsConfig);
 
 app.get('/', (req: Request, res: Response) => {
   res.send('Hello, Express with TypeScript!');

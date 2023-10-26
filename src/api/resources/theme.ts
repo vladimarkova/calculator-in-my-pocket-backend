@@ -3,7 +3,7 @@ import express, { Router, Request, Response } from 'express';
 const router: Router = express.Router();
 
 router.get('/', (req: Request, res: Response) => {
-  res.json({ message: 'API route for themes' });
+  res.status(200).json({ message: 'API route for themes' });
 });
 
 router.get('/:id', (req: Request, res: Response) => {
