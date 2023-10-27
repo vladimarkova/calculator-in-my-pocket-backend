@@ -1,26 +1,26 @@
 [
   {
     "id": "1",
-    "title": "GreenApple",
-    "mainBgColorHex": "#fff",
-    "textColorHex": "#8d61ae",
-    "highlightColorHex": "#95c852",
+    "title": "Default Calculator",
+    "mainBgColorHex": "#8076a3",
+    "textColorHex": "#ffffff",
+    "highlightColorHex": "#9bc400",
     "editable": false
   },
   {
     "id": "2",
     "title": "GreenApple",
     "mainBgColorHex": "#454545",
-    "textColorHex": "#fff",
+    "textColorHex": "#9bc400",
     "highlightColorHex": "#31a617",
     "editable": false
   },
   {
     "id": "1698419971242-0.529811076373351",
-    "title": "GreenApple EDITED EDITED",
-    "mainBgColorHex": "#eca3cb",
+    "title": "SkyBlue",
+    "mainBgColorHex": "#9acee8",
     "textColorHex": "#ffffff",
-    "highlightColorHex": "##003366",
+    "highlightColorHex": "#003366",
     "editable": true
   }
 ]
