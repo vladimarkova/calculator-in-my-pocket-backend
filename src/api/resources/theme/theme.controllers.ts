@@ -36,11 +36,15 @@ export const getAllThemes = (req: Request, res: Response) => {
 };
 
 export const getThemeById = (req: Request, res: Response) => {
-  const themeId = req.params.id;
+  const id = req.params.id;
+  if (!id) {
+    return res.status(500).json({ error: ERROR_MESSAGES.DATA.MISSING_DATA });
+  }
+
   return fs.readFile(dataPath, 'utf-8')
     .then((data: string) => {
       const themes = JSON.parse(data);
-      const theme = themes.find((theme: ITheme) => theme.id === themeId);
+      const theme = themes.find((theme: ITheme) => theme.id === id);
       if (theme) {
         return res.json(theme);
       } else {
@@ -74,8 +78,9 @@ export const createTheme = (req: Request, res: Response) => {
 
 export const updateTheme = (req: Request, res: Response) => {
   const id = req.params.id;
-  console.log('id and body: ', id, req.body);
-  // return res.status(200).json(mockThemes[0]);
+  if (!id) {
+    return res.status(500).json({ error: ERROR_MESSAGES.DATA.MISSING_DATA });
+  }
 
   return fs.readFile(dataPath, 'utf-8')
     .then((data: string) => {
@@ -94,5 +99,29 @@ export const updateTheme = (req: Request, res: Response) => {
     .catch((err) => {
       console.log('Error updating theme: ', err);
       return res.status(500).json({ error: ERROR_MESSAGES.THEMES.ERROR_UPDATING_THEME });
+    });
+}
+
+export const deleteTheme = (req: Request, res: Response) => {
+  const id = req.params.id;
+  if (!id) {
+    return res.status(500).json({ error: ERROR_MESSAGES.DATA.MISSING_DATA });
+  }
+  return fs.readFile(dataPath, 'utf-8')
+    .then((data: string) => {
+      const themes = JSON.parse(data);
+      const themeToDelete = themes.find((theme: ITheme) => theme.id === id);
+      if (!themeToDelete) {
+        return Promise.reject(new Error(ERROR_MESSAGES.DATA.MISSING_DATA));
+      }
+      const resultThemes = themes.filter((theme: ITheme) => theme.id !== themeToDelete.id);
+      return Promise.all([themeToDelete, fs.writeFile(dataPath, JSON.stringify(resultThemes, null, 2), 'utf-8')]);
+    })
+    .then(([theme, _]) => {
+      return res.status(200).json(theme);
+    })
+    .catch((err) => {
+      console.log('Error deleting theme: ', err);
+      return res.status(500).json({ error: ERROR_MESSAGES.THEMES.ERROR_DELETING_THEME });
     });
 }

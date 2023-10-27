@@ -7,5 +7,6 @@ export const ERROR_MESSAGES = {
         ERROR_LOADING_THEME: "Error loading theme",
         ERROR_CREATING_THEME: 'Error creating theme',
         ERROR_UPDATING_THEME: 'Error updating theme',
+        ERROR_DELETING_THEME: 'Error deleting theme'
     }
 }

@@ -1,5 +1,5 @@
 import express, { Router } from 'express';
-import { createTheme, getAllThemes, getThemeById, updateTheme } from './theme.controllers';
+import { createTheme, deleteTheme, getAllThemes, getThemeById, updateTheme } from './theme.controllers';
 import { myTest } from './theme.middleware';
 
 const router: Router = express.Router();
@@ -11,5 +11,7 @@ router.get('/:id', getThemeById);
 router.post('/', createTheme);
 
 router.put('/:id', updateTheme);
+
+router.delete('/:id', deleteTheme);
 
 export default router;
