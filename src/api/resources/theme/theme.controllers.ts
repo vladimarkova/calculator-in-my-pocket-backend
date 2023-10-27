@@ -20,9 +20,10 @@ const mockThemes = [
 ];
 
 export const getAllThemes = (req: Request, res: Response) => {
-    const themes = JSON.parse(fs.readFileSync(dataPath, 'utf-8'));
-    const result = { entries: themes, count: mockThemes.length };
-    res.status(200).json(result);
+  console.log('params: ', req.query);
+  const themes = JSON.parse(fs.readFileSync(dataPath, 'utf-8'));
+  const result = { entries: themes, count: mockThemes.length };
+  res.status(200).json(result);
 };
 
 export const getThemeById = (req: Request, res: Response) => {
