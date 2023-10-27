@@ -4,7 +4,7 @@ import { ITheme } from "../../../interfaces";
 const fs = require('fs');
 const path = require('path');
 
-const dataPath = path.join(__dirname, '../db.json');
+const dataPath = path.resolve((global as any).__basedir, 'src', 'database', 'db.json');
 
 const mockThemes = [
     { id: '1',
@@ -20,9 +20,8 @@ const mockThemes = [
 ];
 
 export const getAllThemes = (req: Request, res: Response) => {
-    //   const themes = JSON.parse(fs.readFileSync(dataPath, 'utf-8'));
-    console.log('path: ', dataPath);
-    const result = { entries: mockThemes, count: mockThemes.length };
+    const themes = JSON.parse(fs.readFileSync(dataPath, 'utf-8'));
+    const result = { entries: themes, count: mockThemes.length };
     res.status(200).json(result);
 };
 

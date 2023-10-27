@@ -4,7 +4,7 @@ import { myTest } from './theme.middleware';
 
 const router: Router = express.Router();
 
-router.get('/', myTest, getAllThemes);
+router.get('/', getAllThemes);
 
 router.get('/:id', getThemeById);
 
