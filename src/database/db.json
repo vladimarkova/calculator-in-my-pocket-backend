@@ -1,14 +1,34 @@
 [
-    {
-      "id": "1",
-      "mainBgColorHex": "#fff",
-      "textColorHex": "#8d61ae",
-      "highlightColorHex": "#95c852"
-    },
-    {
-      "id": "2",
-      "mainBgColorHex": "#454545",
-      "textColorHex": "#fff",
-      "highlightColorHex": "#31a617"
-    }
+  {
+    "id": "1",
+    "title": "GreenApple",
+    "mainBgColorHex": "#fff",
+    "textColorHex": "#8d61ae",
+    "highlightColorHex": "#95c852",
+    "editable": false
+  },
+  {
+    "id": "2",
+    "title": "GreenApple",
+    "mainBgColorHex": "#454545",
+    "textColorHex": "#fff",
+    "highlightColorHex": "#31a617",
+    "editable": false
+  },
+  {
+    "id": "1698419971242-0.529811076373351",
+    "title": "GreenApple EDITED EDITED",
+    "mainBgColorHex": "#eca3cb",
+    "textColorHex": "#ffffff",
+    "highlightColorHex": "##003366",
+    "editable": true
+  },
+  {
+    "id": "1698420002091-0.19677453806668788",
+    "title": "GreenApple2",
+    "mainBgColorHex": "#eca3cb",
+    "textColorHex": "#ffffff",
+    "highlightColorHex": "##003366",
+    "editable": true
+  }
 ]
