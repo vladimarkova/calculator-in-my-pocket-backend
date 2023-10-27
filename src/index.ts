@@ -4,7 +4,7 @@ import express, { Request, Response } from 'express';
 import themeRouter from './api/resources/theme';
 
 const app = express();
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || 8000;
 
 const corsUrl = [
     "https://localhost:4200",

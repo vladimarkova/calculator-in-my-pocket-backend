@@ -1,0 +1,14 @@
+[
+    {
+      "id": "1",
+      "mainBgColorHex": "#fff",
+      "textColorHex": "#8d61ae",
+      "highlightColorHex": "#95c852"
+    },
+    {
+      "id": "2",
+      "mainBgColorHex": "#454545",
+      "textColorHex": "#fff",
+      "highlightColorHex": "#31a617"
+    }
+]
