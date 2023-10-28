@@ -20,7 +20,7 @@ const corsConfig = cors({
     credentials: false
 });
 
-app.use(corsConfig);
+// app.use(corsConfig);
 
 app.use((req, res, next) => {
   res.header('Cache-Control', 'no-cache, no-store, must-revalidate');
