@@ -2,7 +2,7 @@
 
 # To run locally, do:
 * Clone the repo (in your terminal run: `git clone https://github.com/vladimarkova/calculator-in-my-pocket-backend.git`)
-* Make sure you have a terminal opened at project's directory (cd calculator-in-my-pocket)
+* Make sure you have a terminal opened at project's directory (cd calculator-in-my-pocket-backend)
 * Run `npm install`
 * Run `yarn start` or `npm start`
 * In the console you should see 'Server is running on port 8000'
