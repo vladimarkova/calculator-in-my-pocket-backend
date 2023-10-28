@@ -6,13 +6,6 @@ import themeRouter from './api/resources/theme/theme.router';
 const app = express();
 const port = process.env.PORT || 8000;
 
-const corsUrl = [
-  "https://localhost:4200",
-  "http://localhost:4200",
-  "http://vladimarkova.github.io/calculator-in-my-pocket",
-  "https://vladimarkova.github.io/calculator-in-my-pocket"
-];
-
 app.use(json());
 
 const allowedOrigins = [
