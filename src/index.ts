@@ -15,9 +15,24 @@ const corsUrl = [
 
 app.use(json());
 
+const allowedOrigins = [
+  "https://localhost:4200",
+  "http://localhost:4200",
+  "http://vladimarkova.github.io/calculator-in-my-pocket",
+  "https://vladimarkova.github.io/calculator-in-my-pocket",
+  'http://vladimarkova.github.io',
+  'https://vladimarkova.github.io'
+];
+
 const corsConfig = cors({
-    origin: corsUrl,
-    credentials: true
+  origin: function (origin, callback) {
+    if (!origin || allowedOrigins.indexOf(origin) !== -1) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
+  credentials: true
 });
 
 app.use(corsConfig);
