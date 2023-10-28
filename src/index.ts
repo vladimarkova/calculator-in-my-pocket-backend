@@ -17,10 +17,10 @@ app.use(json());
 
 const corsConfig = cors({
     origin: corsUrl,
-    credentials: false
+    credentials: true
 });
 
-// app.use(corsConfig);
+app.use(corsConfig);
 
 app.use((req, res, next) => {
   res.header('Cache-Control', 'no-cache, no-store, must-revalidate');
