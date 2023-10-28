@@ -6,7 +6,7 @@
   "scripts": {
     "build": "tsc",
     "start": "tsc && node .",
-    "start:prod": "npm run build && NODE_ENV=prod node ."
+    "start:prod": "npx tsc && yarn build && NODE_ENV=prod node ."
   },
   "keywords": [],
   "author": "",
