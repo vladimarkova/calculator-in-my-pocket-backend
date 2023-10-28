@@ -4,6 +4,8 @@ import { ITheme } from "../../../interfaces";
 import { promises as fs } from 'fs';
 import * as path from 'path';
 
+
+// The file db.json is used to serve as a database for the project for now before a real database is connected
 const dataPath = path.resolve((global as any).__basedir, 'src', 'database', 'db.json');
 
 const mockThemes = [
